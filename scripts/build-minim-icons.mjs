@@ -2,31 +2,10 @@ import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs"
 import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 
+import { iconSources } from "./icon-sources.mjs"
+
 const projectRoot = join(dirname(fileURLToPath(import.meta.url)), "..")
 const outputDir = join(projectRoot, "registry/default/minim-icons")
-
-const icons = [
-  ["minim-1", "minim1.svg", "minim1 selected.svg"],
-  ["minim-2", "minim2.svg", "minim2 selected.svg"],
-  ["minim-3", "minim3.svg", "minim3 selected.svg"],
-  ["minim-4", "minim4.svg", "minim4 selected.svg"],
-  ["minim-5", "minim5 .svg", "minim5 selected.svg"],
-  ["minim-6", "minim6.svg", "minim6 selected.svg"],
-  ["library", "Library.svg", "Library Selected.svg"],
-  ["catalog", "Catalog.svg", "Catalog Selected.svg"],
-  ["search", "Search.svg", "Search Selected.svg"],
-  ["explore", "explore.svg", "explore selected.svg"],
-  ["explore-2", "explore2.svg", "explore2 selected.svg"],
-  ["notification", "Notification.svg", "Notification Selected.svg"],
-  ["profile", "Profile.svg", "Profile Selected.svg"],
-  ["profile-2", "Profile2.svg", "Profile2 Selected.svg"],
-  ["settings", "Settings.svg", "Settings Selected.svg"],
-  ["settings-2", "Settings2.svg", "Settings2 Selected.svg"],
-  ["left", "left.svg", "left selected.svg"],
-  ["right", "right.svg", "right selected.svg"],
-  ["up", "up.svg", "up selected.svg"],
-  ["down", "down .svg", null],
-]
 
 function componentName(name) {
   return `${name
@@ -147,7 +126,7 @@ ${indent(icon.default, 12)}
 
 const source = new Map()
 
-for (const [name, defaultFile, selectedFile] of icons) {
+for (const [name, defaultFile, selectedFile] of iconSources) {
   const defaultIcon = readSvg(defaultFile)
   const selectedIcon = selectedFile
     ? readSvg(selectedFile)
