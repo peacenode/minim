@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "minim",
+  "homepage": "https://github.com/peacenode/minim-icons",
+  "items": [
+    {
+      "name": "minim-icons",
+      "type": "registry:component",
+      "title": "Minim Icons",
+      "description": "Twenty customizable Minim interface icons with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/minim-icons.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "docs": "Import MinimIcon, pass an icon name and optional default or selected variant, then size and color it with standard SVG props or Tailwind classes."
+    }
+  ]
+}
