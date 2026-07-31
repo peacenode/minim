@@ -13,7 +13,7 @@ npx shadcn@latest add peacenode/minim/minim-icons
 Or from the hosted registry endpoint:
 
 ```bash
-npx shadcn@latest add https://minim.vercel.app/r/minim-icons.json
+npx shadcn@latest add https://minim-peace-babb9191.vercel.app/r/minim-icons.json
 ```
 
 ## Use
