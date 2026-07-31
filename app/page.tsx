@@ -16,9 +16,17 @@ export default function Home() {
           <p className="mt-2 text-sm text-muted-foreground">
             20 icons with default and selected variants.
           </p>
-          <div className="mt-8 w-full space-y-3 text-left">
-            <CopyCode label="Initialize shadcn" code={initCommand} />
-            <CopyCode label="Install all" code={installAllCommand} />
+          <div className="mt-8 flex w-full flex-col items-center gap-3 text-left">
+            <CopyCode
+              label="Initialize shadcn"
+              code={initCommand}
+              className="w-fit max-w-full"
+            />
+            <CopyCode
+              label="Install all"
+              code={installAllCommand}
+              className="w-fit max-w-full"
+            />
           </div>
         </div>
       </div>

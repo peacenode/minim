@@ -2,13 +2,10 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 
 import { CopyCode } from "@/components/copy-code"
+import { IconDemo } from "@/components/icon-demo"
 import { RegistryShell } from "@/components/registry-shell"
 import { iconMetadata, isIconName } from "@/lib/icon-metadata"
-import {
-  iconNames,
-  MinimIcon,
-  type IconName,
-} from "@/registry/default/minim-icons/minim-icons"
+import { iconNames, type IconName } from "@/registry/default/minim-icons/minim-icons"
 
 interface IconPageProps {
   params: Promise<{ name: string }>
@@ -21,15 +18,30 @@ function installCommand(name: IconName) {
 function usageCode(name: IconName) {
   const { component, label } = iconMetadata[name]
 
-  return `import { ${component} } from "@/components/minim-icons/${name}-icon"
+  return `"use client"
+
+import * as React from "react"
+
+import { Button } from "@/components/ui/button"
+import { ${component} } from "@/components/minim-icons/${name}-icon"
 
 export function Example() {
+  const [selected, setSelected] = React.useState(false)
+
   return (
-    <${component}
-      variant="selected"
-      className="size-8"
-      title="${label}"
-    />
+    <Button
+      type="button"
+      variant="ghost"
+      size="icon"
+      aria-pressed={selected}
+      onClick={() => setSelected((current) => !current)}
+    >
+      <${component}
+        variant={selected ? "selected" : "default"}
+        className="size-8"
+        title="${label}"
+      />
+    </Button>
   )
 }`
 }
@@ -61,18 +73,14 @@ export default async function IconPage({ params }: IconPageProps) {
   return (
     <RegistryShell activeIcon={name}>
       <div className="flex min-h-svh flex-col items-center justify-center px-6 py-12 sm:px-10">
-        <div className="flex flex-col items-center gap-6">
-          <MinimIcon
-            name={name}
-            variant="selected"
-            className="size-40 sm:size-56"
-          />
+        <div className="flex w-full flex-col items-center gap-6">
+          <IconDemo name={name} label={label} />
           <h1 className="text-balance text-center text-lg font-medium tracking-tight">
             {label}
           </h1>
           <CopyCode
             code={installCommand(name)}
-            className="w-full max-w-md"
+            className="w-fit max-w-full"
           />
         </div>
 
