@@ -60,11 +60,7 @@ export default async function IconPage({ params }: IconPageProps) {
 
   return (
     <RegistryShell activeIcon={name}>
-      <div className="relative flex min-h-svh flex-col items-center justify-center px-6 py-36 sm:px-10">
-        <div className="absolute left-1/2 top-4 w-[calc(100%-2rem)] max-w-xl -translate-x-1/2 sm:top-6">
-          <CopyCode label={`Install ${label}`} code={installCommand(name)} />
-        </div>
-
+      <div className="flex min-h-svh flex-col items-center justify-center px-6 py-12 sm:px-10">
         <div className="flex flex-col items-center gap-6">
           <MinimIcon
             name={name}
@@ -74,6 +70,10 @@ export default async function IconPage({ params }: IconPageProps) {
           <h1 className="text-balance text-center text-lg font-medium tracking-tight">
             {label}
           </h1>
+          <CopyCode
+            code={installCommand(name)}
+            className="w-full max-w-md"
+          />
         </div>
 
         <section className="mt-16 w-full max-w-xl" aria-labelledby="usage-title">
