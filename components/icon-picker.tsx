@@ -7,7 +7,10 @@ import {
   MinimIcon,
   type IconName,
 } from "@/registry/default/minim-icons/minim-icons"
+import { InstallCommand } from "@/components/install-command"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+
+const installCommand = "npx shadcn@latest add peacenode/minim/minim-icons"
 
 const labels: Record<IconName, string> = {
   search: "Search",
@@ -76,7 +79,11 @@ export function IconPicker() {
         </ToggleGroup>
       </aside>
 
-      <main className="flex min-w-0 items-center justify-center px-6 py-12 sm:px-10">
+      <main className="relative flex min-w-0 items-center justify-center px-6 py-12 sm:px-10">
+        <div className="absolute left-1/2 top-4 w-[calc(100%-2rem)] max-w-fit -translate-x-1/2 sm:top-6">
+          <InstallCommand command={installCommand} />
+        </div>
+
         <div className="flex flex-col items-center gap-6" aria-live="polite">
           <MinimIcon
             name={selected}
@@ -86,9 +93,6 @@ export function IconPicker() {
           <h1 className="text-balance text-center text-lg font-medium tracking-tight">
             {labels[selected]}
           </h1>
-          <code className="max-w-72 break-all text-center text-xs text-muted-foreground sm:max-w-none">
-            npx shadcn@latest add peacenode/minim/minim-icons
-          </code>
         </div>
       </main>
     </div>
