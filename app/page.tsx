@@ -1,9 +1,13 @@
+import { ArrowDownToLine } from "lucide-react"
+
 import { CopyCode } from "@/components/copy-code"
 import { RegistryShell } from "@/components/registry-shell"
+import { Button } from "@/components/ui/button"
 
 const initCommand = "npx shadcn@latest init"
 const installAllCommand =
   "npx shadcn@latest add peacenode/minim/minim-icons"
+const downloadPath = "/downloads/2026-07-31-1733/minim-icons.zip"
 
 export default function Home() {
   return (
@@ -28,6 +32,15 @@ export default function Home() {
               className="w-fit max-w-full"
             />
           </div>
+          <Button
+            asChild
+            className="mt-6 h-auto rounded-full bg-black px-4 py-3 text-xs text-white hover:bg-black/90 has-[>svg]:px-4"
+          >
+            <a href={downloadPath} download="minim-icons.zip">
+              <ArrowDownToLine aria-hidden="true" />
+              Download all
+            </a>
+          </Button>
         </div>
       </div>
     </RegistryShell>

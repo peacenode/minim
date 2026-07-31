@@ -6,6 +6,7 @@
     "predev": "npm run registry:build",
     "dev": "next dev",
     "icons:build": "node scripts/build-minim-icons.mjs",
+    "icons:download": "node scripts/build-icon-download.mjs",
     "registry:build": "npm run icons:build && shadcn build",
     "prebuild": "npm run registry:build",
     "build": "next build",
