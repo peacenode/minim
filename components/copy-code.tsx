@@ -53,7 +53,9 @@ export function CopyCode({ code, label, className }: CopyCodeProps) {
   return (
     <div className={cn("min-w-0", className)}>
       {label ? (
-        <div className="mb-1 px-1 text-xs text-muted-foreground">{label}</div>
+        <div className="mb-1 px-1 text-center text-xs text-muted-foreground">
+          {label}
+        </div>
       ) : null}
       <div className="flex min-w-0 items-start gap-1 rounded-md bg-muted/70 p-1 pl-3 text-muted-foreground backdrop-blur-sm">
         <pre className="min-w-0 flex-1 overflow-x-auto py-2 text-xs leading-relaxed">

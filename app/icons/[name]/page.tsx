@@ -15,32 +15,53 @@ function installCommand(name: IconName) {
   return `npx shadcn@latest add peacenode/minim/${name}`
 }
 
-function usageCode(name: IconName) {
+function basicUsageCode(name: IconName) {
   const { component, label } = iconMetadata[name]
 
-  return `"use client"
+  return `import { ${component} } from "@/components/minim-icons/${name}-icon"
 
-import * as React from "react"
+export function Example() {
+  return (
+    <div className="flex items-center gap-4">
+      <${component} className="size-8" title="${label}" />
+      <${component}
+        variant="selected"
+        className="size-8"
+        title="${label} selected"
+      />
+    </div>
+  )
+}`
+}
+
+function navigationUsageCode(name: IconName) {
+  const { component, label } = iconMetadata[name]
+
+  return `import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 import { ${component} } from "@/components/minim-icons/${name}-icon"
 
-export function Example() {
-  const [selected, setSelected] = React.useState(false)
+interface IconNavItemProps {
+  active: boolean
+}
 
+export function IconNavItem({ active }: IconNavItemProps) {
   return (
     <Button
-      type="button"
-      variant="ghost"
-      size="icon"
-      aria-pressed={selected}
-      onClick={() => setSelected((current) => !current)}
+      asChild
+      variant={active ? "secondary" : "ghost"}
     >
-      <${component}
-        variant={selected ? "selected" : "default"}
-        className="size-8"
-        title="${label}"
-      />
+      <Link
+        href="/${name}"
+        aria-current={active ? "page" : undefined}
+      >
+        <${component}
+          variant={active ? "selected" : "default"}
+          className="size-8"
+        />
+        <span>${label}</span>
+      </Link>
     </Button>
   )
 }`
@@ -84,12 +105,27 @@ export default async function IconPage({ params }: IconPageProps) {
           />
         </div>
 
-        <section className="mt-16 w-full max-w-xl" aria-labelledby="usage-title">
-          <h2 id="usage-title" className="mb-2 px-1 text-sm font-medium">
-            Usage
-          </h2>
-          <CopyCode code={usageCode(name)} />
-        </section>
+        <div className="mt-16 w-full max-w-xl space-y-12">
+          <section aria-labelledby="basic-usage-title">
+            <h2
+              id="basic-usage-title"
+              className="mb-2 px-1 text-sm font-medium"
+            >
+              Basic usage
+            </h2>
+            <CopyCode code={basicUsageCode(name)} />
+          </section>
+
+          <section aria-labelledby="navigation-usage-title">
+            <h2
+              id="navigation-usage-title"
+              className="mb-2 px-1 text-sm font-medium"
+            >
+              Navigation usage
+            </h2>
+            <CopyCode code={navigationUsageCode(name)} />
+          </section>
+        </div>
       </div>
     </RegistryShell>
   )
