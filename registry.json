@@ -1,21 +1,422 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "minim",
-  "homepage": "https://github.com/peacenode/minim",
+  "homepage": "https://minim.peaceno.de",
   "items": [
     {
       "name": "minim-icons",
       "type": "registry:component",
       "title": "Minim Icons",
-      "description": "Twenty customizable Minim interface icons with default and selected variants.",
+      "description": "20 customizable Minim interface icons with default and selected variants.",
       "author": "Minim",
       "files": [
         {
+          "path": "registry/default/minim-icons/minim-1-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-1-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/minim-2-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-2-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/minim-3-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-3-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/minim-4-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-4-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/minim-5-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-5-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/minim-6-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-6-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/library-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/library-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/catalog-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/catalog-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/search-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/search-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/explore-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/explore-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/explore-2-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/explore-2-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/notification-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/notification-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/profile-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/profile-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/profile-2-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/profile-2-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/settings-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/settings-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/settings-2-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/settings-2-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/left-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/left-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/right-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/right-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/up-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/up-icon.tsx"
+        },
+        {
+          "path": "registry/default/minim-icons/down-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/down-icon.tsx"
+        },
+        {
           "path": "registry/default/minim-icons/minim-icons.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-icons.tsx"
         }
       ],
-      "docs": "Import MinimIcon, pass an icon name and optional default or selected variant, then size and color it with standard SVG props or Tailwind classes."
+      "docs": "Import any named icon component, or use MinimIcon with a name. Pass variant=\"selected\" for its selected artwork and customize it with standard SVG props or Tailwind classes."
+    },
+    {
+      "name": "minim-1",
+      "type": "registry:component",
+      "title": "Minim 1",
+      "description": "Minim 1 with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/minim-1-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-1-icon.tsx"
+        }
+      ],
+      "docs": "Import Minim1Icon from \"@/components/minim-icons/minim-1-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "minim-2",
+      "type": "registry:component",
+      "title": "Minim 2",
+      "description": "Minim 2 with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/minim-2-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-2-icon.tsx"
+        }
+      ],
+      "docs": "Import Minim2Icon from \"@/components/minim-icons/minim-2-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "minim-3",
+      "type": "registry:component",
+      "title": "Minim 3",
+      "description": "Minim 3 with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/minim-3-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-3-icon.tsx"
+        }
+      ],
+      "docs": "Import Minim3Icon from \"@/components/minim-icons/minim-3-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "minim-4",
+      "type": "registry:component",
+      "title": "Minim 4",
+      "description": "Minim 4 with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/minim-4-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-4-icon.tsx"
+        }
+      ],
+      "docs": "Import Minim4Icon from \"@/components/minim-icons/minim-4-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "minim-5",
+      "type": "registry:component",
+      "title": "Minim 5",
+      "description": "Minim 5 with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/minim-5-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-5-icon.tsx"
+        }
+      ],
+      "docs": "Import Minim5Icon from \"@/components/minim-icons/minim-5-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "minim-6",
+      "type": "registry:component",
+      "title": "Minim 6",
+      "description": "Minim 6 with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/minim-6-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/minim-6-icon.tsx"
+        }
+      ],
+      "docs": "Import Minim6Icon from \"@/components/minim-icons/minim-6-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "library",
+      "type": "registry:component",
+      "title": "Library",
+      "description": "Library with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/library-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/library-icon.tsx"
+        }
+      ],
+      "docs": "Import LibraryIcon from \"@/components/minim-icons/library-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "catalog",
+      "type": "registry:component",
+      "title": "Catalog",
+      "description": "Catalog with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/catalog-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/catalog-icon.tsx"
+        }
+      ],
+      "docs": "Import CatalogIcon from \"@/components/minim-icons/catalog-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "search",
+      "type": "registry:component",
+      "title": "Search",
+      "description": "Search with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/search-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/search-icon.tsx"
+        }
+      ],
+      "docs": "Import SearchIcon from \"@/components/minim-icons/search-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "explore",
+      "type": "registry:component",
+      "title": "Explore",
+      "description": "Explore with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/explore-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/explore-icon.tsx"
+        }
+      ],
+      "docs": "Import ExploreIcon from \"@/components/minim-icons/explore-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "explore-2",
+      "type": "registry:component",
+      "title": "Explore 2",
+      "description": "Explore 2 with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/explore-2-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/explore-2-icon.tsx"
+        }
+      ],
+      "docs": "Import Explore2Icon from \"@/components/minim-icons/explore-2-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "notification",
+      "type": "registry:component",
+      "title": "Notification",
+      "description": "Notification with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/notification-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/notification-icon.tsx"
+        }
+      ],
+      "docs": "Import NotificationIcon from \"@/components/minim-icons/notification-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "profile",
+      "type": "registry:component",
+      "title": "Profile",
+      "description": "Profile with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/profile-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/profile-icon.tsx"
+        }
+      ],
+      "docs": "Import ProfileIcon from \"@/components/minim-icons/profile-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "profile-2",
+      "type": "registry:component",
+      "title": "Profile 2",
+      "description": "Profile 2 with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/profile-2-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/profile-2-icon.tsx"
+        }
+      ],
+      "docs": "Import Profile2Icon from \"@/components/minim-icons/profile-2-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "settings",
+      "type": "registry:component",
+      "title": "Settings",
+      "description": "Settings with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/settings-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/settings-icon.tsx"
+        }
+      ],
+      "docs": "Import SettingsIcon from \"@/components/minim-icons/settings-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "settings-2",
+      "type": "registry:component",
+      "title": "Settings 2",
+      "description": "Settings 2 with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/settings-2-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/settings-2-icon.tsx"
+        }
+      ],
+      "docs": "Import Settings2Icon from \"@/components/minim-icons/settings-2-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "left",
+      "type": "registry:component",
+      "title": "Left",
+      "description": "Left with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/left-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/left-icon.tsx"
+        }
+      ],
+      "docs": "Import LeftIcon from \"@/components/minim-icons/left-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "right",
+      "type": "registry:component",
+      "title": "Right",
+      "description": "Right with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/right-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/right-icon.tsx"
+        }
+      ],
+      "docs": "Import RightIcon from \"@/components/minim-icons/right-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "up",
+      "type": "registry:component",
+      "title": "Up",
+      "description": "Up with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/up-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/up-icon.tsx"
+        }
+      ],
+      "docs": "Import UpIcon from \"@/components/minim-icons/up-icon\". Pass variant=\"selected\" for its selected artwork."
+    },
+    {
+      "name": "down",
+      "type": "registry:component",
+      "title": "Down",
+      "description": "Down with default and selected variants.",
+      "author": "Minim",
+      "files": [
+        {
+          "path": "registry/default/minim-icons/down-icon.tsx",
+          "type": "registry:component",
+          "target": "@components/minim-icons/down-icon.tsx"
+        }
+      ],
+      "docs": "Import DownIcon from \"@/components/minim-icons/down-icon\". Pass variant=\"selected\" for its selected artwork."
     }
   ]
 }

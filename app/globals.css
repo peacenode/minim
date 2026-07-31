@@ -49,14 +49,6 @@
   }
 }
 
-.minim-icon-button[data-state="on"] .icon-default {
-  opacity: 0;
-}
-
-.minim-icon-button[data-state="on"] .icon-selected {
-  opacity: 1;
-}
-
 .minim-wordmark {
   color: var(--foreground);
   font-family: "Caribon", serif;

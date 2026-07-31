@@ -3,6 +3,7 @@
 /public/r/
 
 *.log
+*.tsbuildinfo
 .DS_Store
 .env*.local
 .vercel
