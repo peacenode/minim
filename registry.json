@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "minim",
-  "homepage": "https://github.com/peacenode/minim-icons",
+  "homepage": "https://github.com/peacenode/minim",
   "items": [
     {
       "name": "minim-icons",

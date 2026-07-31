@@ -87,7 +87,7 @@ export function IconPicker() {
             {labels[selected]}
           </h1>
           <code className="max-w-72 break-all text-center text-xs text-muted-foreground sm:max-w-none">
-            npx shadcn@latest add peacenode/minim-icons/minim-icons
+            npx shadcn@latest add peacenode/minim/minim-icons
           </code>
         </div>
       </main>

@@ -1,8 +1,8 @@
 /node_modules/
 /.next/
-/.vercel/
 /public/r/
 
 *.log
 .DS_Store
 .env*.local
+.vercel

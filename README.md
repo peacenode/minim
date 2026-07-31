@@ -1,19 +1,19 @@
-# Minim Icons
+# Minim
 
-A shadcn registry item for 20 Minim interface icons. Each icon includes a default and selected variant and renders as a customizable inline SVG.
+The shared shadcn registry for Minim. It currently ships 20 interface icons, each with a default and selected variant rendered as a customizable inline SVG.
 
 ## Install
 
 From the public GitHub registry:
 
 ```bash
-npx shadcn@latest add peacenode/minim-icons/minim-icons
+npx shadcn@latest add peacenode/minim/minim-icons
 ```
 
 Or from the hosted registry endpoint:
 
 ```bash
-npx shadcn@latest add https://minim-icons.vercel.app/r/minim-icons.json
+npx shadcn@latest add https://minim.vercel.app/r/minim-icons.json
 ```
 
 ## Use
