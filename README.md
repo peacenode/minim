@@ -1,8 +1,16 @@
 # Minim
 
-The shared shadcn registry for Minim. It currently ships 20 interface icons, each with a default and selected variant rendered as a customizable inline SVG.
+The shared shadcn registry for Minim. It currently ships 20 named React icon components, each with default and selected variants.
 
-## Install
+## Setup
+
+Initialize shadcn in your project if it is not already configured:
+
+```bash
+npx shadcn@latest init
+```
+
+## Install all
 
 From the public GitHub registry:
 
@@ -13,25 +21,39 @@ npx shadcn@latest add peacenode/minim/minim-icons
 Or from the hosted registry endpoint:
 
 ```bash
-npx shadcn@latest add https://minim-peace-babb9191.vercel.app/r/minim-icons.json
+npx shadcn@latest add https://minim.peaceno.de/r/minim-icons.json
+```
+
+Install a single icon by its registry name:
+
+```bash
+npx shadcn@latest add peacenode/minim/library
 ```
 
 ## Use
 
 ```tsx
-import { MinimIcon } from "@/components/minim-icons"
+import { LibraryIcon } from "@/components/minim-icons/library-icon"
 
 export function Example() {
   return (
     <div className="flex items-center gap-2">
-      <MinimIcon name="library" className="size-6" title="Library" />
-      <MinimIcon name="library" variant="selected" className="size-6" />
+      <LibraryIcon className="size-6" title="Library" />
+      <LibraryIcon variant="selected" className="size-6" />
     </div>
   )
 }
 ```
 
-`MinimIcon` accepts standard SVG props. Default icons inherit `currentColor`, so Tailwind color classes work without changing the source.
+Each named icon accepts standard SVG props and a `default` or `selected` variant. Icons inherit `currentColor`, so Tailwind color classes work without changing their source.
+
+The install-all item also includes `MinimIcon` for dynamic rendering:
+
+```tsx
+import { MinimIcon } from "@/components/minim-icons/minim-icons"
+
+<MinimIcon name="library" variant="selected" className="size-6" />
+```
 
 The exported `iconNames`, `IconName`, and `IconVariant` values provide the complete typed API.
 
