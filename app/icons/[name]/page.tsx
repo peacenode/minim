@@ -3,7 +3,6 @@ import { notFound } from "next/navigation"
 
 import { CopyCode } from "@/components/copy-code"
 import { IconDemo } from "@/components/icon-demo"
-import { RegistryShell } from "@/components/registry-shell"
 import { iconMetadata, isIconName } from "@/lib/icon-metadata"
 import { iconNames, type IconName } from "@/registry/default/minim-icons/minim-icons"
 
@@ -92,41 +91,39 @@ export default async function IconPage({ params }: IconPageProps) {
   const { label } = iconMetadata[name]
 
   return (
-    <RegistryShell activeIcon={name}>
-      <div className="flex min-h-svh flex-col items-center justify-center px-6 py-12 sm:px-10">
-        <div className="flex w-full flex-col items-center gap-6">
-          <IconDemo name={name} label={label} />
-          <h1 className="text-balance text-center text-lg font-medium tracking-tight">
-            {label}
-          </h1>
-          <CopyCode
-            code={installCommand(name)}
-            className="w-fit max-w-full"
-          />
-        </div>
-
-        <div className="mt-16 w-full max-w-xl space-y-12">
-          <section aria-labelledby="basic-usage-title">
-            <h2
-              id="basic-usage-title"
-              className="mb-2 px-1 text-sm font-medium"
-            >
-              Basic usage
-            </h2>
-            <CopyCode code={basicUsageCode(name)} />
-          </section>
-
-          <section aria-labelledby="navigation-usage-title">
-            <h2
-              id="navigation-usage-title"
-              className="mb-2 px-1 text-sm font-medium"
-            >
-              Navigation usage
-            </h2>
-            <CopyCode code={navigationUsageCode(name)} />
-          </section>
-        </div>
+    <div className="flex min-h-svh flex-col items-center justify-center px-6 py-12 sm:px-10">
+      <div className="flex w-full flex-col items-center gap-6">
+        <IconDemo name={name} label={label} />
+        <h1 className="text-balance text-center text-lg font-medium tracking-tight">
+          {label}
+        </h1>
+        <CopyCode
+          code={installCommand(name)}
+          className="w-fit max-w-full"
+        />
       </div>
-    </RegistryShell>
+
+      <div className="mt-16 w-full max-w-xl space-y-12">
+        <section aria-labelledby="basic-usage-title">
+          <h2
+            id="basic-usage-title"
+            className="mb-2 px-1 text-sm font-medium"
+          >
+            Basic usage
+          </h2>
+          <CopyCode code={basicUsageCode(name)} />
+        </section>
+
+        <section aria-labelledby="navigation-usage-title">
+          <h2
+            id="navigation-usage-title"
+            className="mb-2 px-1 text-sm font-medium"
+          >
+            Navigation usage
+          </h2>
+          <CopyCode code={navigationUsageCode(name)} />
+        </section>
+      </div>
+    </div>
   )
 }

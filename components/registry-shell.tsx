@@ -1,22 +1,53 @@
+"use client"
+
 import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useLayoutEffect, useRef } from "react"
 
 import { Button } from "@/components/ui/button"
 import { iconMetadata } from "@/lib/icon-metadata"
 import {
   iconNames,
   MinimIcon,
-  type IconName,
 } from "@/registry/default/minim-icons/minim-icons"
 
 interface RegistryShellProps {
-  activeIcon?: IconName
   children: React.ReactNode
 }
 
-export function RegistryShell({ activeIcon, children }: RegistryShellProps) {
+const sidebarScrollKey = "minim-sidebar-scroll-position"
+
+export function RegistryShell({ children }: RegistryShellProps) {
+  const pathname = usePathname()
+  const sidebarRef = useRef<HTMLElement>(null)
+  const activeIcon = iconNames.find((name) => pathname === `/icons/${name}`)
+
+  useLayoutEffect(() => {
+    const sidebar = sidebarRef.current
+
+    if (!sidebar) return
+
+    const savedPosition = window.sessionStorage.getItem(sidebarScrollKey)
+
+    if (savedPosition) {
+      sidebar.scrollTop = Number(savedPosition)
+    }
+
+    const savePosition = () => {
+      window.sessionStorage.setItem(sidebarScrollKey, String(sidebar.scrollTop))
+    }
+
+    sidebar.addEventListener("scroll", savePosition, { passive: true })
+
+    return () => sidebar.removeEventListener("scroll", savePosition)
+  }, [])
+
   return (
     <div className="grid min-h-svh grid-cols-[4.75rem_minmax(0,1fr)] sm:grid-cols-[13rem_minmax(0,1fr)]">
-      <aside className="fixed inset-y-0 left-0 z-20 w-[4.75rem] overflow-y-auto overscroll-y-contain bg-muted/40 px-2 pb-2 pt-16 sm:w-[13rem] sm:px-4 sm:pb-4 sm:pt-20">
+      <aside
+        ref={sidebarRef}
+        className="fixed inset-y-0 left-0 z-20 w-[4.75rem] overflow-y-auto overscroll-y-contain bg-muted/40 px-2 pb-2 pt-16 sm:w-[13rem] sm:px-4 sm:pb-4 sm:pt-20"
+      >
         <Link
           href="/"
           className="minim-wordmark absolute left-1/2 top-1 -translate-x-1/2 rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-ring sm:left-6 sm:translate-x-0"
